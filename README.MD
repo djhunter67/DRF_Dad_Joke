@@ -8,7 +8,6 @@ Django: ```Django 4.0```<br>
 
 ## Dad Joke API
 
----
 
 - initial directory structure
 
