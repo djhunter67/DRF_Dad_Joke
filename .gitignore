@@ -1,0 +1,10 @@
+venv*
+__pycache__
+.vscode
+*~
+package-lock.json
+.prettierrc
+node_modules
+package.json
+secret*
+.env
