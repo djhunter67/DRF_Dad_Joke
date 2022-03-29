@@ -12,6 +12,8 @@ from resources.helpers.dad_joke import Dad_Joke
 class CurrentDadJoke(APIView):
     """Return the second newest joke in the db"""
 
+    authentication_classes = []
+
     def get(self, request) -> Response:
 
         joker = Dad_Joke()
@@ -29,6 +31,6 @@ class NextDadJoke(APIView):
 
     def get(self, request) -> Response:
 
-        next_joke_object = NextJokeModel.objects.latest("next_joke")
+        next_joke_object = NextJokeModel.objects.last()
 
         return Response(str(next_joke_object))
