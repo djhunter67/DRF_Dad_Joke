@@ -1,4 +1,4 @@
-# Django REST framework
+# Django REST framework Dad Joke API wrapper
 
 This is the first project in my professional portfolio. <br>
 Author: ```Christerpher V. Hunter```<br>

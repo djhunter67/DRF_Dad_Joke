@@ -1,7 +1,10 @@
 from django.urls import path
 
-app_name = 'api'
+from api.views import CurrentDadJoke, NextDadJoke
+
+app_name = "api"
 
 urlpatterns = [
-    # path('', include('api.urls'))
+    path("", CurrentDadJoke.as_view(), name="current_joke"),
+    path("next/", NextDadJoke.as_view(), name="next_joke"),
 ]

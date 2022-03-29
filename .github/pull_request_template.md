@@ -4,6 +4,7 @@ This PR...
 ## Screenshots
 (prefer animated gif)
 ## Checklist
+- [ ] synced trunk
 - [ ] tested locally
 - [ ] added new dependencies
 - [ ] updated the docs
