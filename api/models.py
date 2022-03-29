@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+<<<<<<< HEAD
 
 class Completed(models.Model):
     """Save todo state as completed or not"""
@@ -17,3 +18,20 @@ class Todo(models.Model):
     completed: models = models.OneToOneField(
         Completed, on_delete=models.CASCADE, related_name="completed_todo"
     )
+=======
+class TimeStampedModel(models.Model):
+    """
+    An abstract base class model that provides self-
+    updating ``created`` and ``modified`` fields.
+    """
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+    class Meta:
+        abstract = True
+
+
+# Store previously gathered jokes
+
+# Store searched terms
+
+>>>>>>> trunk
