@@ -6,13 +6,20 @@ from django.db import models
 class CurrentJokeModel(models.Model):
     """Store previously gathered jokes"""
 
-    joke: models = models.CharField(max_length=10000, name="present joke")
+    joke = models.CharField(max_length=10000, name="present_joke")
+
+    def __str__(self) -> str:
+        return f"{self.present_joke}"
 
 
 class NextJokeModel(models.Model):
     """Store the next joke to be presented"""
 
-    joke: models = models.CharField(max_length=10000, name="next joke")
+    joke = models.CharField(max_length=10000, name="next_joke")
+
+    def __str__(self) -> str:
+        return f"{self.next_joke}"
+
 
 class TimeStampedModel(models.Model):
     """

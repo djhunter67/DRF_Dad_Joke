@@ -29,6 +29,6 @@ class NextDadJoke(APIView):
 
     def get(self, request) -> Response:
 
-        next_joke_object = get_object_or_404(NextJokeModel)
+        next_joke_object = NextJokeModel.objects.latest("next_joke")
 
         return Response(str(next_joke_object))
