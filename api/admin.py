@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from api.models import Completed, Todo
+from api.models import CurrentJokeModel, NextJokeModel
 
 # Register your models here.
 
-admin.site.register(Completed)
-admin.site.register(Todo)
+admin.site.register(NextJokeModel)
+admin.site.register(CurrentJokeModel)
