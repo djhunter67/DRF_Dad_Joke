@@ -16,11 +16,11 @@ class CurrentDadJoke(APIView):
 
     def get(self, request) -> Response:
 
-        joker = Dad_Joke()
+        joker: Dad_Joke = Dad_Joke()
 
-        joke_object = CurrentJokeModel(present_joke=joker.get_joke()["joke"])
+        joke_object: CurrentJokeModel = CurrentJokeModel(present_joke=joker.get_joke()["joke"])
         joke_object.save()
-        next_joke = NextJokeModel(next_joke=joker.get_joke()["joke"])
+        next_joke: NextJokeModel = NextJokeModel(next_joke=joker.get_joke()["joke"])
         next_joke.save()
 
         return Response(str(joke_object), status=status.HTTP_200_OK)
@@ -31,6 +31,6 @@ class NextDadJoke(APIView):
 
     def get(self, request) -> Response:
 
-        next_joke_object = NextJokeModel.objects.last()
+        next_joke_object: NextJokeModel = NextJokeModel.objects.last()
 
         return Response(str(next_joke_object))
